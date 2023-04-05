@@ -5,7 +5,7 @@
     </figure>
     <div class="input_search">
       <label for="">Search</label>
-      <input type="search" placeholder="Saul" />
+      <input type="search" placeholder="Rick" />
     </div>
     <div class="categories">
       <h3>species</h3>
@@ -38,7 +38,7 @@
       <p>5 Results</p>
     </div>
     <div class="results__cards">
-      <div class="card" *ngFor="let item of characters">
+      <div class="card" *ngFor="let item of characters" (click)="charactersSelected(item.id)">
         <figure>
           <img src="{{item.image}}" alt="" />
         </figure>
@@ -55,4 +55,23 @@
       </div>
     </div>
   </section>
+</div>
+<div class="section_selected">
+  <div class="results__cards">
+    <div class="card" *ngFor="let item of listCharactersSelected" (click)="removeCharacterSelected(item.id)">
+      <figure>
+        <img src="{{item.image}}" alt="" />
+      </figure>
+      <img src="" alt="" />
+      <div class="mini_card">
+        <div class="mini_card__content">
+          <p class="mini_cardName">{{item.name}}</p>
+          <p class="mini_cardNick">{{item.species}}</p>
+          <hr />
+          <p class="mini_cardLabel">Ocupation</p>
+          <p class="mini_cardOcupation">{{item.type == "" ? 'Sin ocupación' : item.type}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

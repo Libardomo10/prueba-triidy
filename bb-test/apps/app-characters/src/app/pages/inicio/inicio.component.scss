@@ -1,28 +1,35 @@
 .container {
   width: 100%;
   display: flex;
+
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
   }
 }
+
 .sidebar {
   width: 20%;
   padding: 40px 30px 0;
   background: white;
+
   @media screen and (max-width: 767px) {
     width: 100%;
     margin-bottom: 50px;
   }
 }
+
 .logo {
   margin-bottom: 30px;
+
   img {
     width: 240px;
   }
 }
+
 .input_search {
   position: relative;
   margin-bottom: 30px;
+
   label {
     background: white;
     width: fit-content;
@@ -32,6 +39,7 @@
     padding: 0 10px;
     font-size: 14px;
   }
+
   input {
     width: 218px;
     height: 56px;
@@ -44,36 +52,46 @@
     font-size: 14px;
     line-height: 24px;
     background: url('/assets/icon-search.svg') no-repeat 5% 50%;
+
     @media screen and (max-width: 767px) {
       width: 100%;
     }
   }
 }
+
 .categories {
   margin-bottom: 30px;
+
   p {
     line-height: 28px;
     margin-bottom: 10px;
   }
 }
+
 .status {
   margin-bottom: 30px;
+
   p {
     line-height: 28px;
     margin-bottom: 10px;
   }
 }
+
 .results {
   width: 80%;
+  display: grid;
+
   @media screen and (max-width: 767px) {
     width: 100%;
   }
+
   &__top {
     background: #149b84;
     height: 220px;
     width: 100%;
     display: flex;
     align-items: center;
+
     p {
       font-weight: 400;
       font-size: 32px;
@@ -83,16 +101,31 @@
       padding: 0 40px;
     }
   }
+
   &__cards {
     margin-top: -70px;
     margin-left: 30px;
+    overflow: auto;
+    display: flex;
+
     .card {
       background: linear-gradient(118.54deg, #149b84 29.4%, #149b84 144.22%);
       border-radius: 10px;
       position: relative;
       width: 300px;
+      height: 375px;
       padding-bottom: 20px;
+      position: relative;
+      float: left;
+      margin-left: 2.1rem;
+      margin-bottom: 1rem;
     }
+
+    .card:hover {
+      // content: "Selecciona el personaje";
+      background-color: #349b14bb;
+    }
+
     .mini_card {
       background: #ffffff;
       box-shadow: 0px 20px 14px rgba(0, 0, 0, 0.25);
@@ -100,31 +133,37 @@
       margin-left: 34px;
       margin-top: -60px;
       position: relative;
+
       &__content {
         padding: 10px 20px;
       }
+
       &Name {
         font-weight: 700;
         font-size: 22px;
         line-height: 24px;
       }
+
       &Nick {
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         color: #149b84;
       }
+
       hr {
         border: 1px solid rgba(81, 64, 64, 0.4);
         width: 100%;
         background: none;
       }
+
       &Label {
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
         color: rgba(0, 0, 0, 0.87);
       }
+
       &Ocupation {
         font-weight: 400;
         font-size: 14px;
@@ -133,6 +172,7 @@
         position: relative;
         display: flex;
         align-items: center;
+
         &::before {
           content: '';
           width: 0;
@@ -145,4 +185,8 @@
       }
     }
   }
+}
+
+.section_selected {
+  margin-top: 120px;
 }
