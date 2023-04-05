@@ -16,6 +16,9 @@
 }
 .logo {
   margin-bottom: 30px;
+  img {
+    width: 240px;
+  }
 }
 .input_search {
   position: relative;
@@ -32,7 +35,7 @@
   input {
     width: 218px;
     height: 56px;
-    border: 2px solid #026926;
+    border: 2px solid #149b84;
     border-radius: 4px;
     padding: 0 10px 0 40px;
     margin-bottom: 10px;
@@ -66,7 +69,7 @@
     width: 100%;
   }
   &__top {
-    background: #026926;
+    background: #149b84;
     height: 220px;
     width: 100%;
     display: flex;
@@ -76,7 +79,7 @@
       font-size: 32px;
       line-height: 24px;
       letter-spacing: 0.15px;
-      color: rgba(255, 255, 255, 0.87);
+      color: #ffffffde;
       padding: 0 40px;
     }
   }
@@ -84,11 +87,10 @@
     margin-top: -70px;
     margin-left: 30px;
     .card {
-      background: linear-gradient(118.54deg, #026926 29.4%, #0a3519 144.22%);
+      background: linear-gradient(118.54deg, #149b84 29.4%, #149b84 144.22%);
       border-radius: 10px;
       position: relative;
-      width: 304px;
-      min-height: 494px;
+      width: 300px;
       padding-bottom: 20px;
     }
     .mini_card {
@@ -110,7 +112,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        color: #026926;
+        color: #149b84;
       }
       hr {
         border: 1px solid rgba(81, 64, 64, 0.4);
@@ -137,7 +139,7 @@
           height: 0;
           border-style: solid;
           border-width: 5px 0 5px 10px;
-          border-color: transparent transparent transparent #026926;
+          border-color: transparent transparent transparent #149b84;
           margin-right: 6px;
         }
       }
